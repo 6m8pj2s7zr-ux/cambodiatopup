@@ -261,4 +261,207 @@
         @media (max-width: 480px) {
             .grid { grid-template-columns: 1fr 1fr; gap: 14px; }
             .card img { height: 130px; }
-            .card-body {
+            .card-body { padding: 12px; gap: 8px; }
+            .card-body h3 { font-size: 0.9rem; }
+            .btn { font-size: 0.78rem; padding: 8px 0; border-radius: 10px; }
+            .modal-box { max-height: 92vh; }
+        }
+
+        @media (max-width: 360px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🎮 Gaming Top-Up Shop</h1>
+        <p>សូមជ្រើសរើសហ្គេម ឬកម្មវិធីដែលអ្នកចង់បញ្ចូលទឹកប្រាក់</p>
+    </header>
+
+    <main>
+        <div class="grid">
+
+            <!-- Free Fire -->
+            <div class="card ff">
+                <img src="image.png" alt="Free Fire" onclick="openModal('ffModal')">
+                <div class="card-body">
+                    <h3 class="yellow">Free Fire</h3>
+                    <button class="btn btn-yellow" onclick="openModal('ffModal')">ទិញឥឡូវនេះ</button>
+                </div>
+            </div>
+
+            <!-- Roblox -->
+            <div class="card disabled">
+                <img src="image_2.png" alt="Roblox">
+                <div class="card-body">
+                    <h3 class="gray">Roblox</h3>
+                    <button class="btn btn-disabled" disabled>មិនទាន់មានទំនិញ</button>
+                </div>
+            </div>
+
+            <!-- BIGO Live -->
+            <div class="card bigo">
+                <img src="image_3.png" alt="BIGO Live" class="contain" onclick="openModal('bigoModal')">
+                <div class="card-body">
+                    <h3 class="cyan">BIGO Live</h3>
+                    <button class="btn btn-cyan" onclick="openModal('bigoModal')">ទិញឥឡូវនេះ</button>
+                </div>
+            </div>
+
+            <!-- Mobile Legends -->
+            <div class="card mlbb">
+                <img src="image_4.png" alt="Mobile Legends" onclick="openModal('mlbbModal')">
+                <div class="card-body">
+                    <h3 class="yellow">Mobile Legends</h3>
+                    <button class="btn btn-yellow" onclick="openModal('mlbbModal')">ទិញឥឡូវនេះ</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- MODAL Free Fire -->
+    <div id="ffModal" class="modal-overlay" onclick="overlayClose(event, 'ffModal')">
+        <div class="modal-box border-yellow">
+            <div class="modal-header">
+                <h2 class="yellow">Free Fire — Price List</h2>
+                <button class="modal-close" onclick="closeModal('ffModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="price-row"><span>💎 25 Diamonds</span><span class="price yellow">$0.28</span></div>
+                <div class="price-row"><span>💎 WEEKLY LITE</span><span class="price yellow">$0.36</span></div>
+                <div class="price-row"><span>💎 Evo Access 3D</span><span class="price yellow">$0.62</span></div>
+                <div class="price-row"><span>💎 Evo Access 7D</span><span class="price yellow">$0.92</span></div>
+                <div class="price-row"><span>💎 100 Diamonds</span><span class="price yellow">$1.03</span></div>
+                <div class="price-row"><span>💎 Weekly Membership</span><span class="price yellow">$1.78</span></div>
+                <div class="price-row"><span>💎 Evo Access 30D</span><span class="price yellow">$2.79</span></div>
+                <div class="price-row"><span>💎 310 Diamonds</span><span class="price yellow">$3.14</span></div>
+                <div class="price-row"><span>💎 520 Diamonds</span><span class="price yellow">$5.24</span></div>
+                <div class="price-row"><span>💎 Monthly Membership</span><span class="price yellow">$8.88</span></div>
+                <div class="price-row"><span>💎 1060 Diamonds</span><span class="price yellow">$10.33</span></div>
+                <div class="price-row"><span>💎 2180 Diamonds</span><span class="price yellow">$20.85</span></div>
+                <div class="price-row"><span>💎 5600 Diamonds</span><span class="price yellow">$51.59</span></div>
+                <div class="price-row"><span>💎 11500 Diamonds</span><span class="price yellow">$106.28</span></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-yellow" onclick="closeModal('ffModal')">បិទ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL BIGO Live -->
+    <div id="bigoModal" class="modal-overlay" onclick="overlayClose(event, 'bigoModal')">
+        <div class="modal-box border-cyan">
+            <div class="modal-header bg-cyan">
+                <h2 class="cyan">BIGO Diamonds — Price List</h2>
+                <button class="modal-close" onclick="closeModal('bigoModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="price-row hover-cyan"><span>💎 20 Diamonds</span><span class="price cyan">$0.44</span></div>
+                <div class="price-row hover-cyan"><span>💎 25 Diamonds</span><span class="price cyan">$0.56</span></div>
+                <div class="price-row hover-cyan"><span>💎 40 Diamonds</span><span class="price cyan">$0.83</span></div>
+                <div class="price-row hover-cyan"><span>💎 50 Diamonds</span><span class="price cyan">$1.09</span></div>
+                <div class="price-row hover-cyan"><span>💎 100 Diamonds</span><span class="price cyan">$2.19</span></div>
+                <div class="price-row hover-cyan"><span>💎 150 Diamonds</span><span class="price cyan">$3.28</span></div>
+                <div class="price-row hover-cyan"><span>💎 200 Diamonds</span><span class="price cyan">$4.37</span></div>
+                <div class="price-row hover-cyan"><span>💎 250 Diamonds</span><span class="price cyan">$5.47</span></div>
+                <div class="price-row hover-cyan"><span>💎 300 Diamonds</span><span class="price cyan">$6.56</span></div>
+                <div class="price-row hover-cyan"><span>💎 500 Diamonds</span><span class="price cyan">$10.95</span></div>
+                <div class="price-row hover-cyan"><span>💎 750 Diamonds</span><span class="price cyan">$16.39</span></div>
+                <div class="price-row hover-cyan"><span>💎 1000 Diamonds</span><span class="price cyan">$21.86</span></div>
+                <div class="price-row hover-cyan"><span>💎 2000 Diamonds</span><span class="price cyan">$43.71</span></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-cyan" onclick="closeModal('bigoModal')">បិទ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL Mobile Legends -->
+    <div id="mlbbModal" class="modal-overlay" onclick="overlayClose(event, 'mlbbModal')">
+        <div class="modal-box border-yellow">
+            <div class="modal-header">
+                <h2 class="yellow">MLBB Diamonds — Price List</h2>
+                <button class="modal-close" onclick="closeModal('mlbbModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="price-row"><span>💎 14 Diamonds</span><span class="price yellow">$0.28</span></div>
+                <div class="price-row"><span>💎 20 + 2 Diamonds</span><span class="price yellow">$0.36</span></div>
+                <div class="price-row"><span>💎 42 Diamonds</span><span class="price yellow">$0.84</span></div>
+                <div class="price-row"><span>💎 50 + 5 Diamonds (First Top-Up)</span><span class="price yellow">$0.90</span></div>
+                <div class="price-row"><span>💎 51 + 5 Diamonds</span><span class="price yellow">$0.91</span></div>
+                <div class="price-row"><span>💎 70 Diamonds</span><span class="price yellow">$1.38</span></div>
+                <div class="price-row"><span>💎 78 + 8 Bonus Diamonds</span><span class="price yellow">$1.42</span></div>
+                <div class="price-row"><span>💎 Weekly Pass</span><span class="price yellow">$1.76</span></div>
+                <div class="price-row"><span>💎 102 + 10 Diamonds</span><span class="price yellow">$1.82</span></div>
+                <div class="price-row"><span>💎 150 + 15 Diamonds (First Top-Up)</span><span class="price yellow">$2.70</span></div>
+                <div class="price-row"><span>💎 140 Diamonds</span><span class="price yellow">$2.76</span></div>
+                <div class="price-row"><span>💎 156 + 16 Bonus Diamonds</span><span class="price yellow">$2.79</span></div>
+                <div class="price-row"><span>💎 203 + 20 Diamonds</span><span class="price yellow">$3.63</span></div>
+                <div class="price-row"><span>💎 234 + 23 Bonus Diamonds</span><span class="price yellow">$4.06</span></div>
+                <div class="price-row"><span>💎 250 + 25 Diamonds (First Top-Up)</span><span class="price yellow">$4.33</span></div>
+                <div class="price-row"><span>💎 303 + 33 Diamonds</span><span class="price yellow">$5.46</span></div>
+                <div class="price-row"><span>💎 284 Diamonds</span><span class="price yellow">$5.51</span></div>
+                <div class="price-row"><span>💎 355 Diamonds</span><span class="price yellow">$6.90</span></div>
+                <div class="price-row"><span>💎 429 Diamonds</span><span class="price yellow">$8.28</span></div>
+                <div class="price-row"><span>💎 500 + 65 Diamonds (First Top-Up)</span><span class="price yellow">$8.90</span></div>
+                <div class="price-row"><span>💎 504 + 66 Diamonds</span><span class="price yellow">$9.09</span></div>
+                <div class="price-row"><span>💎 Twilight Pass</span><span class="price yellow">$9.67</span></div>
+                <div class="price-row"><span>💎 625 + 81 Bonus Diamonds</span><span class="price yellow">$10.99</span></div>
+                <div class="price-row"><span>💎 716 Diamonds</span><span class="price yellow">$13.81</span></div>
+                <div class="price-row"><span>💎 1007 + 156 Diamonds</span><span class="price yellow">$18.17</span></div>
+                <div class="price-row"><span>💎 1446 Diamonds</span><span class="price yellow">$27.52</span></div>
+                <div class="price-row"><span>💎 1860 + 335 Bonus Diamonds</span><span class="price yellow">$33.26</span></div>
+                <div class="price-row"><span>💎 2015 + 383 Diamonds</span><span class="price yellow">$36.36</span></div>
+                <div class="price-row"><span>💎 2976 Diamonds</span><span class="price yellow">$53.80</span></div>
+                <div class="price-row"><span>💎 3099 + 589 Bonus Diamonds</span><span class="price yellow">$55.50</span></div>
+                <div class="price-row"><span>💎 4649 + 883 Bonus Diamonds</span><span class="price yellow">$83.79</span></div>
+                <div class="price-row"><span>💎 5035 + 1007 Diamonds</span><span class="price yellow">$90.88</span></div>
+                <div class="price-row"><span>💎 7502 Diamonds</span><span class="price yellow">$135.14</span></div>
+                <div class="price-row"><span>💎 7740 + 1548 Bonus Diamonds</span><span class="price yellow">$139.16</span></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-yellow" onclick="closeModal('mlbbModal')">បិទ</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Gaming Top-Up Shop · រក្សាសិទ្ធិគ្រប់យ៉ាង</p>
+    </footer>
+
+    <script>
+        function openModal(id) {
+            var el = document.getElementById(id);
+            if (el) {
+                el.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal(id) {
+            var el = document.getElementById(id);
+            if (el) {
+                el.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function overlayClose(event, id) {
+            if (event.target === document.getElementById(id)) {
+                closeModal(id);
+            }
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                ['ffModal', 'bigoModal', 'mlbbModal'].forEach(function(id) {
+                    closeModal(id);
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
